@@ -29,9 +29,15 @@ person.watch('age', function(age) {
     console.log('Some one is over the hill!');
   }
 });
+
+person.set('age', 50);
+// "Is it your birthday?"
+// "Some one is over the hill!"
 ```
 
 Easily remove a single watcher by passing in the handler's reference, or remove all the handlers by passing in just the property name!
 ```javascript
 person.unwatch('age');
+person.set('age', 99);
+// *crickets*
 ```
