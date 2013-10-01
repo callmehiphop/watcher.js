@@ -6,6 +6,24 @@
 
 ### Examples
 
+The `Watcher` constructor accepts only 1 argument, an Object. This can be a literal Object or an instance of a custom classish type thing.
+```javascript
+var Person = function(name, age) {
+  this.name = name;
+  this.age = age;
+};
+
+Person.prototype.greet = function() {
+  console.log('Hi! My name is ' + this.name);
+};
+
+var steve = new Person('Steve', '22');
+steve = new Watcher(steve);
+steve.greet();
+// "Hi! My name is Steve"
+```
+
+Watching for changes is very simple, simply `watch` a specific property and specify a callback to be fired whenever its value changes.
 ```javascript
 var person = new Watcher({
   name: 'Steve',
