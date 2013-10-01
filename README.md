@@ -17,39 +17,39 @@ Person.prototype.greet = function() {
   console.log('Hi! My name is ', this.name);
 };
 
-var steve = new Person('Steve', 22);
+var stephen = new Person('Stephen', 26);
 
-steve = new Watcher(steve);
-steve.greet();
-// "Hi! My name is Steve"
+stephen = new Watcher(stephen);
+stephen.greet();
+// "Hi! My name is Stephen"
 ```
 
 Watching for changes is very simple, simply `watch` a specific property and specify a callback to be fired whenever its value changes.
 ```javascript
-steve.watch('age', function() {
+stephen.watch('age', function() {
   console.log('Hey ', this.get('name'), ', is it your birthday?');
 });
 
-steve.set('age', 23);
-// "Hey Steve, is it your birthday?"
+stephen.set('age', 27);
+// "Hey Stephen, is it your birthday?"
 ```
 
 You can add as many watchers to a single property as you'd like
 ```javascript
-steve.watch('age', function(age) {
-  if (age > 49) {
+stephen.watch('age', function(age) {
+  if (age > 39) {
     console.log('Looks like some one is over the hill!');
   }
 });
 
-steve.set('age', 50);
-// "Hey, Steve, is it your birthday?"
+stephen.set('age', 40);
+// "Hey, Stephen, is it your birthday?"
 // "Looks like some one is over the hill!"
 ```
 
 Easily remove a single watcher by passing in the handler's reference, or remove all the handlers by passing in just the property name!
 ```javascript
-steve.unwatch('age');
-steve.set('age', 99);
+stephen.unwatch('age');
+stephen.set('age', 99);
 // *crickets*
 ```
