@@ -1,6 +1,6 @@
 # watcher.js
 
-> Easily watch for changes on your objects
+> Easily watch for changes on your objects, based on [Object.prototype.watch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch)
 
 ### Examples
 
