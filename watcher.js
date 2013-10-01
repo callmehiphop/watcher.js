@@ -59,7 +59,7 @@
           if (isFunc(handler)) {
             handler.call(this, value);
           }
-        });
+        }, this);
       },
 
 
