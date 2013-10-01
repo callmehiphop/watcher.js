@@ -17,7 +17,8 @@ Person.prototype.greet = function() {
   console.log('Hi! My name is ' + this.name);
 };
 
-var steve = new Person('Steve', '22');
+var steve = new Person('Steve', 22);
+
 steve = new Watcher(steve);
 steve.greet();
 // "Hi! My name is Steve"
