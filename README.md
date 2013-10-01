@@ -2,6 +2,8 @@
 
 > Easily watch for changes on your objects, based on [Object.prototype.watch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch)
 
+> Works in IE7+ and requires no additional shims
+
 ### Examples
 
 ```javascript
