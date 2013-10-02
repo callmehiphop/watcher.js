@@ -4,6 +4,12 @@
 
 > Works in IE7+ and requires no additional shims
 
+### Installation
+
+This can be installed via Bower with `bower install watcher.js`.
+
+Alternatively, you can download the [zip](https://github.com/callmehiphop/watcher.js/archive/0.0.2.zip).
+
 ### Examples
 
 The `Watcher` constructor accepts only 1 argument, an Object. This can be a literal Object or an instance of a custom classish type thing.
