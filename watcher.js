@@ -1,4 +1,14 @@
-(function(window) {
+(function(root, factory) {
+
+  if (typeof define === 'function' && define.amd) {
+    define(factory);
+  } else if (typeof module !== 'undefined' && module.exports) {
+    module.exports = factory();
+  } else {
+    root.Watcher = factory();
+  }
+
+}(this, function() {
   
   'use strict';
 
@@ -125,7 +135,7 @@
     var length = things ? things.length : 0;
     var i = -1;
 
-    context = context || window;
+    context = context || this;
 
     while (++i < length) {
       if (callback.call(context, things[i], i) === false) {
@@ -168,8 +178,7 @@
 
 
 
+  return Watcher;
 
-  window.Watcher = Watcher;
 
-
-}(this));
+}));
