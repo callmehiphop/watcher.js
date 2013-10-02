@@ -1,6 +1,6 @@
 {
   "name": "watcher.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Dave Gramlich",
   "description": "Cross-browser Object.prototype.watch-ish type thing",
   "main": "watcher.js",
